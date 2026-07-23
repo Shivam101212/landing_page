@@ -1,7 +1,14 @@
 .section {
+  max-width: 100%;
+  margin: 0 0;
+  padding: 32px 24px 0;
+  background: #eef1e6;
+}
+.main {
   max-width: 1280px;
   margin: 0 auto;
   padding: 32px 24px 0;
+  
 }
 
 /* ------------------------------ Quote banner ----------------------------- */

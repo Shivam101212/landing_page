@@ -42,6 +42,7 @@ export default function CareerPathsSection() {
             <strong>MediBridge Diagnostic</strong> is
             <br />
             Driving the next wave of Diagnostic innovation in India.
+            https://prod.liveshare.vsengsaas.visualstudio.com/join?0AADAB4AA4090B41C5983CCCA335B754B091
           </h2>
           <p className={styles.subtext}>
             We offer tailored career paths for early professionals, students,
