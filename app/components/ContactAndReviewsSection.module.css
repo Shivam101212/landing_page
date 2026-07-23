@@ -1,0 +1,214 @@
+.section {
+  max-width: 100%;
+  margin: 0 auto0;
+  padding: 56px 24px;
+  background: #eef1e6;
+}
+.main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------- Contact -------------------------------- */
+
+.contactTitle {
+  font-family: var(--font-poppins, "Poppins", sans-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1c1c1c;
+  margin: 0 0 12px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-poppins, "Poppins", sans-serif);
+  font-size: 0.95rem;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+.pinIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #9a9a9a;
+}
+
+/* ------------------------------ How we do this ---------------------------- */
+
+.heading {
+  font-family: var(--font-poppins, "Poppins", sans-serif);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  color: #1c1c1c;
+  margin: 0 0 12px;
+}
+
+.body {
+  font-family: var(--font-poppins, "Poppins", sans-serif);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5a5a5a;
+  margin: 0;
+  max-width: 34ch;
+}
+
+/* -------------------------------- Reviews card ---------------------------- */
+
+.reviewsHeading {
+  font-family: var(--font-poppins, "Poppins", sans-serif);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #4aa3a3;
+  margin: 0 0 16px;
+}
+
+.googleCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  max-width: 460px;
+}
+
+.googleLogo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.gBlue {
+  color: #4285f4;
+}
+.gRed {
+  color: #ea4335;
+}
+.gYellow {
+  color: #fbbc05;
+}
+.gGreen {
+  color: #34a853;
+}
+
+.googleText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+}
+
+.stars {
+  color: #fbbc05;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.ratingCount {
+  font-family: var(--font-poppins, "Poppins", sans-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #1c1c1c;
+}
+
+.ratingCaption {
+  font-family: var(--font-poppins, "Poppins", sans-serif);
+  font-size: 0.82rem;
+  color: #8a8a8a;
+  margin: 4px 0 0;
+}
+
+/* ---------------------------------- Image --------------------------------- */
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #e9edd4;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* -------------------------------- Responsive ------------------------------- */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imageWrap {
+    order: 2;
+    aspect-ratio: 16 / 10;
+  }
+
+  .content {
+    order: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 40px 16px;
+  }
+
+  .content {
+    gap: 32px;
+  }
+
+  .googleCard {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    padding: 20px 22px;
+    max-width: 100%;
+  }
+
+  .googleLogo {
+    font-size: 1.6rem;
+  }
+
+  .ratingCount {
+    font-size: 1rem;
+  }
+
+  .imageWrap {
+    aspect-ratio: 4 / 3;
+    border-radius: 22px;
+  }
+}
