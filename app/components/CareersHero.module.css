@@ -1,0 +1,149 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #f7f8f3;
+  isolation: isolate;
+}
+
+/* soft green radial glow, lower-left */
+.bgGlow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+      55% 70% at 12% 90%,
+      rgba(201, 216, 81, 0.22) 0%,
+      rgba(201, 216, 81, 0) 70%
+    ),
+    radial-gradient(
+      40% 60% at 100% 0%,
+      rgba(82, 178, 173, 0.08) 0%,
+      rgba(82, 178, 173, 0) 70%
+    );
+  pointer-events: none;
+}
+
+/* cream blob peeking in from the bottom edge */
+.bgBlob {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: -60%;
+  height: 140px;
+  z-index: 0;
+  border-radius: 48% 48% 0 0 / 100% 100% 0 0;
+  background: #fdf6df;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 64px 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.heading {
+  font-family: var(--font-poppins, "Poppins", sans-serif);
+  font-weight: 500;
+  font-size: clamp(2.75rem, 5vw, 4.75rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #0b3c49;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.badge {
+  flex-shrink: 0;
+  max-width: 446px;
+  width: 100%;
+}
+
+.badgeImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----------------------- Responsive breakpoints ----------------------- */
+
+/* Large desktop: give the badge a touch more breathing room */
+@media (min-width: 1440px) {
+  .inner {
+    padding: 112px 0 160px;
+  }
+}
+
+/* Tablet: tighten padding, scale badge down a bit */
+@media (max-width: 1024px) {
+  .inner {
+    padding: 72px 40px 120px;
+    gap: 24px;
+  }
+
+  .badge {
+    max-width: 340px;
+  }
+}
+
+/* Small tablet / large phone: start stacking */
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 56px 24px 100px;
+    gap: 28px;
+  }
+
+  .badge {
+    max-width: 300px;
+    align-self: center;
+  }
+
+  .bgBlob {
+    bottom: -50%;
+    height: 100px;
+  }
+}
+
+/* Phone: center everything, shrink further */
+@media (max-width: 480px) {
+  .inner {
+    align-items: center;
+    text-align: center;
+    padding: 48px 20px 88px;
+    gap: 24px;
+  }
+
+  .heading {
+    font-size: clamp(2.25rem, 11vw, 3rem);
+  }
+
+  .badge {
+    max-width: 240px;
+  }
+
+  .bgBlob {
+    bottom: -45%;
+    height: 80px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .badge {
+    max-width: 200px;
+  }
+}
